@@ -1,0 +1,62 @@
+@mixin primary-title{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    color: $meroon;
+    font-style: normal;
+    @media (max-width:767.98px){
+        font-size: 36px;
+        line-height: 36px;
+    }
+    @media (max-width: 590.98px){
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+@mixin secondary-title{
+    font-size: 24.5424px;
+    font-weight: 700;
+    line-height: 33px;
+    color: $medium-black;
+    font-style: normal;
+    @media (max-width:767.98px){
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+@mixin primary-text{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+    color: $black;
+    @media (max-width:767.98px){
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+@mixin secondary-text{
+    font-size: 18.4068px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+    color: $medium-black;
+    @media (max-width:767.98px){
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@mixin card-button-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: $off-White;
+    @media (max-width:767.98px){
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

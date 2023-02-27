@@ -1,0 +1,12 @@
+@mixin card-button{
+    @include card-button-text;
+    @include flexCenter;
+    background: $meroon;
+    border-radius: 15px;
+    padding: 10px 16px;
+    text-transform: capitalize;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+}

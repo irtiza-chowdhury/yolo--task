@@ -1,0 +1,217 @@
+@import "./config/fonts";
+@import "./config/vairables";
+@import "./config/utilities";
+@import "./config/mixin";
+
+// Heebo fonts
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fullBody {
+  background: $off-White;
+  padding: 10px 60px;
+}
+
+// upperPart style starts
+.upperPart {
+  @include flexCenter;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 652px;
+  height: 102px;
+  @media (max-width: 767.98px) {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__title {
+    @include primary-title;
+  }
+  &__text {
+    margin-top: 10px;
+    @include primary-text;
+    text-align: center;
+  }
+}
+// upperPart style ends
+
+// mainPart style starts
+.mainPart {
+  margin-top: 45px;
+  @include flexBetween;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+
+  // cards style starts
+  &__card {
+    width: 100%;
+    border-radius: 20px;
+    height: 544px;
+
+    &-image {
+      height: 544px;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      &-info {
+        height: 175px;
+        width: 100%;
+        border-radius: 20px;
+        background: $off-White;
+        padding: 38px 40px 10px;
+        -webkit-clip-path: polygon(
+          9% 3%,
+          11% 2%,
+          14% 3%,
+          87% 51%,
+          98% 60%,
+          100% 64%,
+          100% 100%,
+          0 100%,
+          0 74%,
+          7% 6%
+        );
+        clip-path: polygon(
+          9% 3%,
+          11% 2%,
+          14% 3%,
+          87% 51%,
+          98% 60%,
+          100% 64%,
+          100% 100%,
+          0 100%,
+          0 74%,
+          7% 6%
+        );
+        @media (max-width: 434.98px) {
+          padding-left: 15px;
+          height: 180px;
+        }
+
+        &-vector {
+          width: 51.13px;
+          height: 48.06px;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &-title {
+          @include secondary-title;
+          margin-top: 10px;
+        }
+
+        &-text {
+          margin-top: 10px;
+          @include secondary-text;
+        }
+
+        &-button {
+          margin-top: 20px;
+          @include card-button;
+        }
+      }
+    }
+  }
+}
+// mainPart style ends
+
+// card-wrapers styles starts
+.card--wrapers {
+  margin-top: 40px;
+  overflow: hidden;
+  width: 391px;
+  height: 544px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 500.98px) {
+    width: 330px;
+  }
+  @media(min-width:1670.98px){
+    width: 28%;
+  }
+}
+// card-wrapers styles ends
+
+// card-info--wrapper style starts
+.card-info--wrapper {
+  padding-top: 8px;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0px;
+  width: 100%;
+  height: 180px;
+  background: $orange;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-clip-path: polygon(
+    9% 3%,
+    11% 2%,
+    14% 3%,
+    87% 51%,
+    98% 60%,
+    100% 64%,
+    100% 100%,
+    0 100%,
+    0 86%,
+    8% 5%
+  );
+  clip-path: polygon(
+    9% 3%,
+    11% 2%,
+    14% 3%,
+    87% 51%,
+    98% 60%,
+    100% 64%,
+    100% 100%,
+    0 100%,
+    0 86%,
+    8% 5%
+  );
+
+  @media (max-width: 767.98px) {
+    height: 170px;
+  }
+  @media (max-width: 411.98px) {
+    height: 180px;
+  }
+  &:hover {
+    height: 253px;
+    padding-top: 20px;
+    transition: all ease-in-out 0.4s;
+    .mainPart__card-image-info {
+      height: 253px;
+      transition: all ease-in-out 0.3s;
+      padding: 30px 40px 10px;
+      @media (max-width: 434.98px) {
+        padding: 38px 15px 19px;
+      }
+      @media (max-width: 383.98px) {
+        padding: 25px 15px 15px;
+      }
+      @media (max-width: 362.98px) {
+        padding: 25px 30px 15px 15px;
+      }
+    }
+  }
+}
+// card-info--wrapper style ends
